@@ -1,7 +1,13 @@
-const getNotes = require("./notes")
-const validator = require('validator')
+const chalk = require('chalk')
+const getNotes = require('./notes')
 
-const note = getNotes()
-console.log(note)
+const command = process.argv[2]
 
-console.log(validator.isURL('https/mead.io'))
+if (command === 'add')
+{
+    console.log('Adding node')
+}
+else if (command === 'remove')
+{
+    console.log('Remove note')
+}
