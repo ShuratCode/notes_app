@@ -71,8 +71,18 @@ const loadNotes = () =>
     }
 }
 
+const listNotes = () =>
+{
+    list_of_notes = loadNotes()
+    console.log(chalk.bold.underline("Your Notes: "))
+    list_of_notes.forEach((note) => {
+        console.log(note.title)
+    })
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
-    removeNote: removeNote
+    removeNote: removeNote,
+    listNotes: listNotes
 }
